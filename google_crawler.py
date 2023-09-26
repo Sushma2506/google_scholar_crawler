@@ -1,11 +1,10 @@
 import pickle
-from multiprocessing import Pool as ProcessPool
 
 from Spider import Spider
 
 def main():
     ### The start page's URL
-    start_url = 'https://scholar.google.com/scholar?hl=en&as_sdt=0%2C44&as_ylo=2019&q=%22computer+Networks%22%22bandwidth%22%22intranet%22%22TCP%22%22protocol%22&btnG='
+    start_url = 'https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=Recommender+system&btnG='
 
     #p_key = ['regression', 'supervise', 'unsupervised', 'speech',
     #         'vision', 'noise recognition', 'cost',
@@ -13,13 +12,13 @@ def main():
     #n_key = ['imagery', 'visual', 'segmentation', 'reflect', 'quantum',
     #         'photon']
 
-    p_key = ['computer Networks', 'bandwidth', 'intranet', 'TCP',
-             'Protocol', 'Since 2019']
-    n_key = ['patents', 'voice', 'persian', 'farsi', 'signal']
+    p_key = ['sentiment analysis', 'emotion detection', 'recommendation', 'recommender system',
+             'text', 'emotion identificayion']
+    n_key = ['speech', 'voice', 'persian', 'farsi', 'signal']
 
 
     ### Google Scholar Crawler, Class Spider
-    myCrawler = Spider(start_url, p_key, n_key, page=80)
+    myCrawler = Spider(start_url, p_key, n_key, page=20)
 
     results = myCrawler.crawl()
 
