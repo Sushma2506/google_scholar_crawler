@@ -1,4 +1,5 @@
 import pickle
+from multiprocessing import Pool as ProcessPool
 
 from Spider import Spider
 

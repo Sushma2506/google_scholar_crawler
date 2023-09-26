@@ -3,6 +3,7 @@ import pandas as pd
 import requests
 from bs4 import BeautifulSoup
 import pdfkit
+from multiprocessing import Pool as ProcessPool
 
 def ThesisNeedDownload(df):
     ### Write the required thesis [title, year, url] which

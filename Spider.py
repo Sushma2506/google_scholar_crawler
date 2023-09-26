@@ -7,7 +7,7 @@ import requests
 from bs4 import BeautifulSoup
 import pdfkit
 import time
-
+from multiprocessing import Pool as ProcessPool
 from ParseOut import ParseOutYear, ParseOutTitle, ParseOutContent, ParseOutTag, ParseOutURL
 
 
